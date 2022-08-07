@@ -3,9 +3,9 @@ import React from "react";
 
 // card design: https://codepen.io/majid-omri/pen/GRmMvOW
 
-const BlogCard = () => {
+const BlogCard = ({ post }) => {
   return (
-    <div className="flex h-[450px] bg-white rounded overflow-hidden shadow-lg">
+    <div className="flex h-[450px] bg-white rounded overflow-hidden shadow-lg mb-10">
       <div className="w-full md:w-2/3 rounded-t relative">
         <Image
           src="https://source.unsplash.com/collection/494263/800x600"
@@ -17,15 +17,11 @@ const BlogCard = () => {
 
       <div className="w-full md:w-1/3 flex flex-col flex-grow flex-shrink">
         <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-          <p className="w-full text-gray-600 text-xs md:text-sm pt-6 px-6">
-            GETTING STARTED
-          </p>
           <div className="w-full font-bold text-xl text-gray-900 px-6">
-            👋 Welcome fellow Tailwind CSS and Ghost fan
+            {post.title}
           </div>
           <p className="text-gray-800 font-serif text-base px-6 mb-5">
-            This starter template is an attempt to replicate the default Ghost
-            theme Casper using Tailwind CSS and vanilla Javascript.
+            {post.content}
           </p>
         </div>
 

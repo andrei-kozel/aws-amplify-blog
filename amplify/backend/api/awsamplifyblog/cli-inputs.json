@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "awsamplifyblog",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "F:\\Development\\react\\aws-amplify-blog\\amplify\\backend\\api\\awsamplifyblog\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    }
+  }
+}
