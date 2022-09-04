@@ -27,22 +27,24 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex justify-center pt-3 pb-3 space-x-4 border-b bg-gray-200 border-gray-300">
-      {[
-        ["Home", "/"],
-        ["Create post", "/create"],
-        ["Profile", "/profile"],
-      ].map(([title, url], index) => (
-        <Link href={url} key={index}>
-          <a className="text-gray-800 hover:text-gray-900">{title}</a>
-        </Link>
-      ))}
-      {isAuthenticated && (
-        <Link href="/my-posts">
-          <a className="text-gray-800 hover:text-gray-900">My posts</a>
-        </Link>
-      )}
-    </nav>
+    <div>
+      <nav className="flex justify-center pt-3 pb-3 space-x-4 border-b bg-gray-200 border-gray-300">
+        {[
+          ["Home", "/"],
+          ["Create post", "/create-post"],
+          ["Profile", "/profile"],
+        ].map(([title, url], index) => (
+          <Link href={url} key={index}>
+            <a className="text-gray-800 hover:text-gray-900">{title}</a>
+          </Link>
+        ))}
+        {isAuthenticated && (
+          <Link href="/my-posts">
+            <a className="text-gray-800 hover:text-gray-900">My posts</a>
+          </Link>
+        )}
+      </nav>
+    </div>
   );
 };
 

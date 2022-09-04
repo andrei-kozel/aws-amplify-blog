@@ -18,9 +18,9 @@ export default function Home() {
   };
 
   return (
-    <div className="px-4 md:px-0 max-w-6xl mx-auto mt-20">
-      {posts.map((post) => (
-        <BlogCard key={post.id} post={post} />
+    <div className="px-4 md:px-0 max-w-3xl mx-auto mt-20 font-bold tracking-wide">
+      {posts.map((post, index) => (
+        <BlogCard key={post.id} post={post} index={index} />
       ))}
     </div>
   );
